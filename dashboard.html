@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greencanto - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-50 font-sans">
+    <nav class="bg-green-600 text-white p-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Greencanto</h1>
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="hover:text-green-200">Home</a></li>
+                <li><a href="projects.html" class="hover:text-green-200">Projects</a></li>
+                <li><a href="dashboard.html" class="hover:text-green-200">Dashboard</a></li>
+                <li><a href="updates.html" class="hover:text-green-200">Updates</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto p-8">
+        <h2 class="text-3xl font-bold mb-8 text-green-800">Your Dashboard</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-2">Total Invested</h3>
+                <p class="text-3xl font-bold text-green-600">€25,000</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-2">Active Projects</h3>
+                <p class="text-3xl font-bold text-blue-600">5</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-2">Total Returns</h3>
+                <p class="text-3xl font-bold text-purple-600">€1,250</p>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Investment Performance</h3>
+            <div class="bg-gray-200 h-64 flex items-center justify-center text-gray-600">
+                Performance Chart Placeholder
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="text-2xl font-semibold mb-4">Recent Activity</h3>
+            <ul class="space-y-4">
+                <li class="flex justify-between items-center">
+                    <span>Invested in Solar Vineyard Project</span>
+                    <span class="text-green-600">€5,000</span>
+                </li>
+                <li class="flex justify-between items-center">
+                    <span>Received dividend from Agrivoltaic Orchard</span>
+                    <span class="text-green-600">€250</span>
+                </li>
+                <li class="flex justify-between items-center">
+                    <span>Updated profile information</span>
+                    <span class="text-gray-500">2 days ago</span>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="bg-green-600 text-white p-4 mt-12">
+        <div class="max-w-6xl mx-auto text-center">
+            <p>&copy; 2023 Greencanto. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
