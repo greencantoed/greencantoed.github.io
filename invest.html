@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invest in Agrivoltaics Projects - Greencanto</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <!-- Same as homepage header -->
+    </header>
+
+    <main>
+        <section id="project-search">
+            <h1>Invest in Agrivoltaics Projects</h1>
+            <form id="search-filter-form">
+                <input type="text" id="search" placeholder="Search projects...">
+                <select id="project-type">
+                    <option value="">All Project Types</option>
+                    <option value="solar">Solar</option>
+                    <option value="wind">Wind</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <select id="investment-range">
+                    <option value="">All Investment Ranges</option>
+                    <option value="0-1000">$0 - $1,000</option>
+                    <option value="1001-5000">$1,001 - $5,000</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section id="project-list">
+            <!-- Project cards will be dynamically inserted here -->
+        </section>
+
+        <template id="project-card-template">
+            <div class="project-card">
+                <img src="" alt="Project Image" class="project-image">
+                <h2 class="project-title"></h2>
+                <p class="project-description"></p>
+                <p class="project-funding"><span class="current-funding"></span> / <span class="funding-goal"></span></p>
+                <progress class="funding-progress" value="0" max="100"></progress>
+                <a href="" class="invest-button">Invest Now</a>
+            </div>
+        </template>
+    </main>
+
+    <footer>
+        <!-- Same as homepage footer -->
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
