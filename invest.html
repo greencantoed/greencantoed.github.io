@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Include Leaflet CSS and JS in the head section of invest.html -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var map = L.map('map').setView([37.5, 14.0], 8); // Centered on Sicily
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        
+        // You can add a marker for the project location
+        L.marker([37.5, 14.0]).addTo(map)
+            .bindPopup('Project Location')
+            .openPopup();
+    });
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Investment Project - Greencanto</title>
@@ -37,6 +56,20 @@
                     <!-- Add more images as necessary -->
                 </div>
             </div>
+    <!-- Section 3: Project Explanation -->
+    <div class="project-explanation">
+        <h2>Project Explanation</h2>
+        <p>This is where you can provide a detailed explanation of the project. Discuss the reasoning behind your choices, both energy-wise and agriculture-wise. Explain the potential benefits, the crops selected, and how the combination of agriculture and solar energy will be optimized in this project.</p>
+        <p>Our social goal is to recuperate land that is currently being unused in Sicily due to lack of investment, the general crisis of small farmers in Sicily, and so on. Through crowdfunding, we have a new way to accrue the necessary funds to make profitable endeavors in Sicilian agriculture feasible.</p>
+    </div>
+
+    <!-- Section 4: Map Display -->
+    <div class="map-display">
+        <h2>Project Location</h2>
+        <div id="map"></div> <!-- This will be where the map is displayed -->
+    </div>
+</div>
+
         </div>
     </div>
 </body>
