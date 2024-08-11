@@ -3,6 +3,10 @@ header {
     background-color: #006400; /* Dark Green */
     color: #fff;
     padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 header nav ul {
@@ -10,10 +14,11 @@ header nav ul {
     display: flex;
     justify-content: center;
     position: relative;
+    padding: 0;
 }
 
 header nav ul li {
-    margin: 0 15px;
+    margin: 0 20px; /* Increased margin for spacing */
     position: relative;
 }
 
@@ -21,6 +26,8 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    padding: 15px 20px; /* Increased padding for larger clickable area */
+    display: block;
 }
 
 header nav ul li:hover .dropdown {
@@ -33,20 +40,23 @@ header nav ul li .dropdown {
     background-color: #006400;
     top: 100%;
     left: 0;
-    width: 200px;
+    min-width: 200px; /* Set a minimum width */
     text-align: left;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for better visibility */
 }
 
 header nav ul li .dropdown li {
-    margin: 0;
+    width: 100%;
 }
 
 header nav ul li .dropdown li a {
-    padding: 10px;
+    padding: 10px 20px; /* Matching padding to main menu */
     display: block;
     border-bottom: 1px solid #32CD32; /* Lime Green */
+    color: #fff;
 }
 
 header nav ul li .dropdown li a:hover {
-    background-color: #32CD32;
+    background-color: #32CD32; /* Highlight color on hover */
 }
