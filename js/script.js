@@ -1,68 +1,36 @@
-// Fetch projects from the server
-async function fetchProjects() {
-    try {
-        const response = await fetch('/api/projects');
-        const projects = await response.json();
-        return projects;
-    } catch (error) {
-        console.error('Error fetching projects:', error);
-    }
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.querySelector('header nav ul');
 
-// Render project cards
-function renderProjects(projects) {
-    const projectList = document.getElementById('project-list');
-    const template = document.getElementById('project-card-template');
-
-    projectList.innerHTML = '';
-
-    projects.forEach(project => {
-        const card = template.content.cloneNode(true);
-        
-        card.querySelector('.project-image').src = project.imageUrl;
-        card.querySelector('.project-title').textContent = project.title;
-        card.querySelector('.project-description').textContent = project.description;
-        card.querySelector('.current-funding').textContent = `$${project.currentFunding}`;
-        card.querySelector('.funding-goal').textContent = `$${project.fundingGoal}`;
-        
-        const progress = (project.currentFunding / project.fundingGoal) * 100;
-        card.querySelector('.funding-progress').value = progress;
-        
-        card.querySelector('.invest-button').href = `/project/${project.id}`;
-
-        projectList.appendChild(card);
-    });
-}
-
-// Handle search and filtering
-function handleSearch(event) {
-    event.preventDefault();
-    
-    const searchTerm = document.getElementById('search').value.toLowerCase();
-    const projectType = document.getElementById('project-type').value;
-    const investmentRange = document.getElementById('investment-range').value;
-
-    // Filter projects based on search criteria
-    const filteredProjects = projects.filter(project => {
-        const matchesSearch = project.title.toLowerCase().includes(searchTerm) || 
-                              project.description.toLowerCase().includes(searchTerm);
-        const matchesType = projectType === '' || project.type === projectType;
-        const matchesRange = investmentRange === '' || 
-                             (investmentRange === '0-1000' && project.minimumInvestment <= 1000) ||
-                             (investmentRange === '1001-5000' && project.minimumInvestment > 1000 && project.minimumInvestment <= 5000);
-        
-        return matchesSearch && matchesType && matchesRange;
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('show');
     });
 
-    renderProjects(filteredProjects);
-}
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const isClickInsideMenu = navMenu.contains(event.target);
+        const isClickOnToggle = menuToggle.contains(event.target);
 
-// Initialize the page
-async function init() {
-    const projects = await fetchProjects();
-    renderProjects(projects);
+        if (!isClickInsideMenu && !isClickOnToggle && navMenu.classList.contains('show')) {
+            navMenu.classList.remove('show');
+        }
+    });
 
-    document.getElementById('search-filter-form').addEventListener('submit', handleSearch);
-}
+    // Close menu when window is resized to larger screen
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && navMenu.classList.contains('show')) {
+            navMenu.classList.remove('show');
+        }
+    });
 
-init();
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});
