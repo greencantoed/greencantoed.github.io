@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Document - Greencanto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #e9f5e9; /* Light green background */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #006400; /* Dark green color for headers */
+        }
+
+        .section {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 100, 0, 0.2); /* Subtle green shadow */
+        }
+
+        .section h2 {
+            margin: 0;
+            cursor: pointer;
+            background-color: #32CD32; /* Lime green for clickable section headers */
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .section h2:hover {
+            background-color: #228B22; /* Darker green on hover */
+        }
+
+        .content {
+            display: none;
+            padding: 10px 0 0;
+        }
+
+        .content p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Greencanto - Legal Framework</h1>
+
+    <div class="section">
+        <h2 onclick="toggleContent(this)">I. Introduction</h2>
+        <div class="content">
+            <p>The purpose of this document is to set out the terms and conditions...</p>
+            <!-- Additional content goes here -->
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 onclick="toggleContent(this)">II. General Provisions</h2>
+        <div class="content">
+            <p>By accessing or using the Platform, users acknowledge that they have read...</p>
+            <!-- Additional content goes here -->
+        </div>
+    </div>
+
+    <!-- Repeat the structure for all sections -->
+
+    <script>
+        function toggleContent(element) {
+            const content = element.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
