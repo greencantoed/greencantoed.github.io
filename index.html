@@ -3,55 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greencanto Platform</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Agrivoltaics Crowdfunding Platform</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-green-50 font-sans">
-    <nav class="bg-green-600 text-white p-4">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Greencanto</h1>
-            <ul class="flex space-x-4">
-                <li><a href="index.html" class="hover:text-green-200">Home</a></li>
-                <li><a href="projects.html" class="hover:text-green-200">Projects</a></li>
-                <li><a href="dashboard.html" class="hover:text-green-200">Dashboard</a></li>
-                <li><a href="updates.html" class="hover:text-green-200">Updates</a></li>
+<body>
+
+    <!-- Header with Dropdown Menu -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Key Highlights</a></li>
+                    </ul>
+                </li>
+                <li><a href="invest.html">Invest</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Ongoing Projects</a></li>
+                        <li><a href="#">Past Projects</a></li>
+                        <li><a href="#">Investment Opportunities</a></li>
+                        <li><a href="#">Risk Warnings</a></li>
+                    </ul>
+                </li>
+                <li><a href="raise-capital.html">Raise Capital</a>
+                    <ul class="dropdown">
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Apply for Funding</a></li>
+                    </ul>
+                </li>
+                <li><a href="how-it-works.html">How It Works</a>
+                    <ul class="dropdown">
+                        <li><a href="#">For Investors</a></li>
+                        <li><a href="#">For Fundraisers</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </li>
+                <li><a href="bulletin-board.html">Bulletin Board</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Listings</a></li>
+                        <li><a href="#">Announcements</a></li>
+                    </ul>
+                </li>
+                <li><a href="investor-relations.html">Investor Relations</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Corporate Governance</a></li>
+                        <li><a href="#">Financial Reports</a></li>
+                        <li><a href="#">Shareholders' Meetings</a></li>
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">Calendar</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </li>
+                <li><a href="about-us.html">About Us</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Company Overview</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Information</a></li>
+                    </ul>
+                </li>
+                <li><a href="legal.html">Legal</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Regulatory Information</a></li>
+                    </ul>
+                </li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <main class="max-w-6xl mx-auto p-8">
-        <h2 class="text-3xl font-bold mb-8 text-green-800">Welcome to Greencanto</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow">
-                <h3 class="text-xl font-semibold mb-4 text-green-700">Invest in Sustainable Agrivoltaics</h3>
-                <p class="mb-4">Greencanto combines solar energy with sustainable agriculture, offering you the opportunity to invest in a greener future.</p>
-                <a href="projects.html" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Explore Projects</a>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow">
-                <h3 class="text-xl font-semibold mb-4 text-green-700">How It Works</h3>
-                <ol class="list-decimal list-inside space-y-2">
-                    <li>Browse our curated list of agrivoltaic projects</li>
-                    <li>Choose a project and invest any amount</li>
-                    <li>Track your investment and watch it grow</li>
-                    <li>Receive returns as the project generates revenue</li>
-                </ol>
-            </div>
-        </div>
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Invest in the Future of Agrivoltaics</h1>
+        <p>Join us in funding sustainable energy and agriculture projects.</p>
+        <a href="invest.html" class="cta-button">Start Investing</a>
+    </section>
 
-        <div class="bg-white p-6 rounded-lg shadow mb-8">
-            <h3 class="text-xl font-semibold mb-4 text-green-700">Featured Project</h3>
-            <div class="bg-gray-200 h-48 mb-4 rounded flex items-center justify-center text-gray-500">Project Image Placeholder</div>
-            <h4 class="text-lg font-semibold mb-2">Solar Vineyard in Tuscany</h4>
-            <p class="mb-4">Combining wine production with solar energy, this project offers a unique investment opportunity in the heart of Italy.</p>
-            <a href="project-detail.html" class="text-green-600 hover:text-green-800">Learn More →</a>
-        </div>
-    </main>
+    <!-- Overview Section -->
+    <section id="overview">
+        <h2>Why Invest with Us?</h2>
+        <p>We offer a unique opportunity to contribute to a sustainable future by investing in agrivoltaics projects.</p>
+        <!-- Add more content as needed -->
+    </section>
 
-    <footer class="bg-green-600 text-white p-4 mt-12">
-        <div class="max-w-6xl mx-auto text-center">
-            <p>&copy; 2023 Greencanto. All rights reserved.</p>
-        </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Agrivoltaics Crowdfunding Platform. All rights reserved.</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
