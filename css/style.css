@@ -1,62 +1,95 @@
-/* Header Styles */
-header {
-    background-color: #006400; /* Dark Green */
-    color: #fff;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    position: relative;
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
     padding: 0;
 }
 
-header nav ul li {
-    margin: 0 20px; /* Increased margin for spacing */
-    position: relative;
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
 
-header nav ul li a {
-    color: #fff;
+/* Header Styles */
+header {
+    background: #005f00;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #00a800 3px solid;
+}
+
+header a {
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
-    padding: 15px 20px; /* Increased padding for larger clickable area */
-    display: block;
+    text-transform: uppercase;
+    font-size: 16px;
 }
 
-header nav ul li:hover .dropdown {
-    display: block;
+header ul {
+    padding: 0;
+    list-style: none;
 }
 
-header nav ul li .dropdown {
-    display: none;
-    position: absolute;
-    background-color: #006400;
-    top: 100%;
-    left: 0;
-    width: 100%; /* Make dropdown the same width as the parent li */
-    text-align: left;
-    border-radius: 0 0 5px 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for better visibility */
+header li {
+    display: inline;
+    padding: 0 20px;
 }
 
-header nav ul li .dropdown li {
-    width: 100%;
+header #branding {
+    float: left;
 }
 
-header nav ul li .dropdown li a {
-    padding: 10px 20px; /* Matching padding to main menu */
-    display: block;
-    border-bottom: 1px solid #32CD32; /* Lime Green */
-    color: #fff;
+header #branding h1 {
+    margin: 0;
 }
 
-header nav ul li .dropdown li a:hover {
-    background-color: #32CD32; /* Highlight color on hover */
+header nav {
+    float: right;
+    margin-top: 10px;
 }
+
+/* Hero Section */
+#hero {
+    min-height: 400px;
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: #ffffff;
+}
+
+#hero h1 {
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    font-size: 18px;
+    color: #ffffff;
+    background: #00a800;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background: #008000;
+}
+
+/* Featured Projects */
+#featured-projects {
+    padding: 15px;
+    background: #f4f4f4;
+}
+
+/* Add more styles as needed */
