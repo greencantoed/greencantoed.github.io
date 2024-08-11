@@ -5,91 +5,178 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+    background-color: #fff;
 }
 
 /* Header Styles */
 header {
-    background: #005f00;
-    color: #ffffff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #00a800 3px solid;
+    background: #fff;
+    padding: 1rem 0;
+    border-bottom: 2px solid #00a800;
+    position: relative;
 }
 
-header a {
-    color: #ffffff;
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    position: relative;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #00a800;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px;
+    padding: 10px 5px;
+    display: block;
 }
 
-header ul {
-    padding: 0;
-    list-style: none;
+/* Dropdown Styles */
+header nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    background: #fff;
+    border: 1px solid #00a800;
+    border-top: none;
+    z-index: 1000;
 }
 
-header li {
-    display: inline;
-    padding: 0 20px;
+header nav ul li:hover .dropdown {
+    display: block;
 }
 
-header #branding {
-    float: left;
-}
-
-header #branding h1 {
+header nav ul li .dropdown li {
     margin: 0;
+    white-space: nowrap;
 }
 
-header nav {
-    float: right;
-    margin-top: 10px;
+header nav ul li .dropdown li a {
+    padding: 10px 15px;
+}
+
+header nav ul li .dropdown li a:hover {
+    background-color: #e6ffe6;
+}
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #00a800;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
 }
 
 /* Hero Section */
 #hero {
-    min-height: 400px;
-    background: url('hero-image.jpg') no-repeat center center/cover;
     text-align: center;
-    color: #ffffff;
+    padding: 50px 20px;
+}
+
+.sun-icon {
+    font-size: 48px;
+    color: #00a800;
+    margin-bottom: 20px;
 }
 
 #hero h1 {
-    margin-top: 100px;
-    font-size: 55px;
-    margin-bottom: 10px;
+    font-size: 4rem;
+    color: #00a800;
+    margin-bottom: 0.5rem;
 }
 
-#hero p {
-    font-size: 20px;
+#hero .slogan {
+    font-size: 1.5rem;
+    color: #00a800;
+    margin-bottom: 1rem;
 }
 
-.cta-button {
-    display: inline-block;
-    font-size: 18px;
-    color: #ffffff;
-    background: #00a800;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    margin-top: 20px;
-}
-
-.cta-button:hover {
-    background: #008000;
-}
-
-/* Featured Projects */
-#featured-projects {
-    padding: 15px;
+/* Projects Section */
+#projects {
+    padding: 50px 20px;
     background: #f4f4f4;
 }
 
-/* Add more styles as needed */
+#projects h2 {
+    text-align: center;
+    color: #00a800;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Footer */
+footer {
+    background: #00a800;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    header nav ul {
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+
+    header nav ul li {
+        margin: 5px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        border-top: 2px solid #00a800;
+    }
+
+    header nav ul.show {
+        display: flex;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header nav ul li .dropdown {
+        position: static;
+        display: none;
+        width: 100%;
+        border: none;
+    }
+
+    header nav ul li:hover .dropdown {
+        display: block;
+    }
+
+    #hero h1 {
+        font-size: 3rem;
+    }
+
+    #hero .slogan {
+        font-size: 1.2rem;
+    }
+}
