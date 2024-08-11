@@ -10,12 +10,12 @@ body {
 
 /* Header Styles */
 header {
-    background: #006400;
+    background-color: #006400;
     padding: 10px 0;
 }
 
 header nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
@@ -24,14 +24,18 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 header nav ul li a {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
     font-size: 14px;
-    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Hero Section */
