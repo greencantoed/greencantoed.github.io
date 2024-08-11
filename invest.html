@@ -3,55 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invest in Agrivoltaics Projects - Greencanto</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Investment Project - Greencanto</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <!-- Same as homepage header -->
+        <nav>
+            <!-- Your navigation links -->
+        </nav>
     </header>
 
-    <main>
-        <section id="project-search">
-            <h1>Invest in Agrivoltaics Projects</h1>
-            <form id="search-filter-form">
-                <input type="text" id="search" placeholder="Search projects...">
-                <select id="project-type">
-                    <option value="">All Project Types</option>
-                    <option value="solar">Solar</option>
-                    <option value="wind">Wind</option>
-                    <!-- Add more options as needed -->
-                </select>
-                <select id="investment-range">
-                    <option value="">All Investment Ranges</option>
-                    <option value="0-1000">$0 - $1,000</option>
-                    <option value="1001-5000">$1,001 - $5,000</option>
-                    <!-- Add more options as needed -->
-                </select>
-                <button type="submit">Search</button>
-            </form>
-        </section>
-
-        <section id="project-list">
-            <!-- Project cards will be dynamically inserted here -->
-        </section>
-
-        <template id="project-card-template">
-            <div class="project-card">
-                <img src="" alt="Project Image" class="project-image">
-                <h2 class="project-title"></h2>
-                <p class="project-description"></p>
-                <p class="project-funding"><span class="current-funding"></span> / <span class="funding-goal"></span></p>
-                <progress class="funding-progress" value="0" max="100"></progress>
-                <a href="" class="invest-button">Invest Now</a>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Project Name</h2>
+            <div class="indicators">
+                <h3>Technical Indicators</h3>
+                <ul>
+                    <li>Rate of Profitability: 12%</li>
+                    <li>Investment Period: 5 years</li>
+                    <li>Minimum Investment: €1,000</li>
+                    <!-- Add more indicators as necessary -->
+                </ul>
             </div>
-        </template>
-    </main>
+        </div>
 
-    <footer>
-        <!-- Same as homepage footer -->
-    </footer>
-
-    <script src="js/script.js"></script>
+        <div class="main-content">
+            <div class="crop-gallery">
+                <h3>Selected Crops</h3>
+                <div class="carousel">
+                    <img src="crop1.jpg" alt="Crop Image 1">
+                    <img src="crop2.jpg" alt="Crop Image 2">
+                    <img src="crop3.jpg" alt="Crop Image 3">
+                    <!-- Add more images as necessary -->
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
