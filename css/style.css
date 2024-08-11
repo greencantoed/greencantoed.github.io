@@ -40,7 +40,7 @@ header nav ul li .dropdown {
     background-color: #006400;
     top: 100%;
     left: 0;
-    min-width: 200px; /* Set a minimum width */
+    width: 100%; /* Make dropdown the same width as the parent li */
     text-align: left;
     border-radius: 0 0 5px 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for better visibility */
