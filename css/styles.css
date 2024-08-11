@@ -1,0 +1,52 @@
+/* Header Styles */
+header {
+    background-color: #006400; /* Dark Green */
+    color: #fff;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li:hover .dropdown {
+    display: block;
+}
+
+header nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #006400;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    text-align: left;
+}
+
+header nav ul li .dropdown li {
+    margin: 0;
+}
+
+header nav ul li .dropdown li a {
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #32CD32; /* Lime Green */
+}
+
+header nav ul li .dropdown li a:hover {
+    background-color: #32CD32;
+}
